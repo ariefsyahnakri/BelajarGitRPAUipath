@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="685,2358" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="685,2458" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
@@ -81,11 +81,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="476,2293" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="476,2393" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="RequestURLSendMessage" />
       <Variable x:TypeArguments="x:String" Name="Token" />
@@ -155,13 +154,13 @@
         <InArgument x:TypeArguments="x:String">[String.Format("https://api.telegram.org/bot{0}/sendPhoto?chat_id={1}&amp;photo={2}", Token, ChatId, inputFile)]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: New InPrivate tab" sap:VirtualizedContainerService.HintSize="434,1740" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="Always" ScopeGuid="1eae04da-2f64-4f45-a4f8-8e87b4747972" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: New InPrivate tab" sap:VirtualizedContainerService.HintSize="434,1729" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="Always" ScopeGuid="1eae04da-2f64-4f45-a4f8-8e87b4747972" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1513" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1503" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="RequestURLResponse" />
               <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="JsonObjectResponse" />
@@ -172,37 +171,37 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NNavigateBrowser Action="GoHome" DisplayName="Navigate Browser - Go Home" sap:VirtualizedContainerService.HintSize="358,92" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="1eae04da-2f64-4f45-a4f8-8e87b4747972" Text="os1901" Version="V3">
+            <uix:NNavigateBrowser Action="GoHome" DisplayName="Navigate Browser - Go Home" sap:VirtualizedContainerService.HintSize="358,91" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="1eae04da-2f64-4f45-a4f8-8e87b4747972" Text="os1901" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="541, 167, 350, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'editable text Username'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='editable text' automationid='' /&gt;" Guid="0b13877d-2798-40b3-be3a-0b95192f7f38" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWIAAAAgCAYAAAAou3KpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVHhe7d2xTsMwFEBRvi8b7gxtxbcQ1KJmC0NgSBd+08iRmoGEgTbpW46lM9hPXu/6HqqqygDEEWKAYGOIU9rk+nDKbdfnrv8GYAWlsaW1pbmTENfHZvYTAMsrzZ2E+OPrPAyftrtxCMCynnf7obXt53l8G0N8qfTlDsA6fvdWiAHu7OoQlzP3DsD/CDFAMCEGCCbEAMGEGCCYEAMEE2KAYEIMEEyIAYIJMUAwIQYIJsQAwYQYIJgQAwQTYoBgQgwQ7OoQA7AMIQYIJsQAwYQYINifIS6rncvAOn2A9Wz3L0NrZ9fp18dmrDQA63p7b6YhTmkzxLjt+tlPANyuNPb1cMqPKU1DDEAMIQYIVeUfI1F40pQHUAYAAAAASUVORK5CYII=" InformativeScreenshot="ccdc7a0d548ea5a716c60680feee673b.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='www.google.com - [InPrivate] - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="475, 173, 54, 16" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='text' automationid='' check:text='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAUCAYAAADcHS5uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEeSURBVFhH7ZLhDQMhCIU7nxs6i1O4gis4AFV5ekBsoj/rSfOSyoHyAR/nHL1BF/Q0XdDT9EbQQKn8gvjonKeYM0Uvff+pC8p6KaiPmYalIGLgK5bCE5tjLDc2JzkfKedIYQSLBoYWBRN+m1P++1YnbNSAWLjLB8OxBboy8SeGmyLiUUiOvp3bd1loV4XufpPD/eh31rfwNhriZ3dAG6CYnLyw5VjjeJ4oF9hki1FnvRXjDZOj7xS1qY2AqToVqJ3ODx+6zB2bNYe1DsqQfeVV3A7obDuEBChWQyS09TKdYXVALlIBQeugYgWRN95cBa1x4o6ZFCgn13F1k9PSazomYNcXha2DAg6WU8HeBa1ns762+Qb0XF3Q03RBz5KjL+ubwiTLexfTAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="1eae04da-2f64-4f45-a4f8-8e87b4747972" Text="[&quot;Os112357&quot;+&quot;[k(enter)]&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="1eae04da-2f64-4f45-a4f8-8e87b4747972" Text="[&quot;Os112357&quot;+&quot;[k(enter)]&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="541, 203, 350, 28" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'editable text Password'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='editable text' automationid='' /&gt;" Guid="fec715e2-cf01-4464-aeed-8eb6076cdb0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWIAAAAgCAYAAAAou3KpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADhSURBVHhe7d0hCsUwEEXRv74uIiJQ3f2rfEY0pFDZ9pkjDkwYfxmX37ZtA4AcIQYIu4S49z72fR/HcQDwgmpstXZt7wxxLVprlyUAz6vWrjGeIa5KnzMA71qbO0NcJ/M5A/CutblCDBAgxABhQgwQJsQAYUIMECbEAGFCDBAmxABhQgwQJsQAYUIMECbEAGFCDBAmxABhQgwQJsQAYUIMECbEAGFCDBAmxABhQgwQdhti3+kDfOf2O/3e+2itzQUA76jWVnPP9wxxqUVVuk5mAJ5XjV0jXC4hBuB7QgwQtY0/FfO7OrWtPcsAAAAASUVORK5CYII=" InformativeScreenshot="c9c951987b39e109cc38ef5632b4729a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='www.google.com - [InPrivate] - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="475, 209, 50, 16" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='text' automationid='' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAUCAYAAADGIc7gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE/SURBVFhH7VTREcMgCO182dBZnMIVXMEBKA9Rwaa5S68fSSt37y4BgffA5LFtG/0ilrC7YQm7G/5BWKBUyFihFPzhyyJmohydbxJmxITE0jLFHr8wTgl7eb8wPhUW3B01W0TBZiVR2PNh8y3GQLikoD0i5R5DP82DGaLCO+EGtVx7ljmmM8Iqg06oASJH8Xmjez4m34cBIZxvhyCEKtEh2A8Az5aLvHchKvJYGCbQzH5fIGdMi0gDd+69L0d+5oeSIvepcQxJ/G5zCrPpni8x8PT1x4CG7+AqNkDUtElXREU7YpNPcwJfGdSpgizBM8JQ+xvCpr8jasxF9nOtD8SZTlbyQpqvZK+Ds8dXcQjzsZZ7XhhDxKjlLF30vDrZaqM936gxk7Fk+5abGaKzMH+WOR//PH4LS9jdsITdCxs9AUFuIoMaPJW8AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="358,92" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[RequestURLSendMessage]" Version="V3" />
-            <uix:NGetText DisplayName="Get Text '{&quot;ok&quot;:true,&quot;result&quot;:{&quot;m…'" sap:VirtualizedContainerService.HintSize="358,167" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="1eae04da-2f64-4f45-a4f8-8e87b4747972" TextString="[RequestURLResponse]" Version="V3">
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="358,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[RequestURLSendMessage]" Version="V3" />
+            <uix:NGetText DisplayName="Get Text '{&quot;ok&quot;:true,&quot;result&quot;:{&quot;m…'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="1eae04da-2f64-4f45-a4f8-8e87b4747972" TextString="[RequestURLResponse]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://api.telegram.org/bot5976580496:AAHFVfc9WBH9NthqwUIeg-Io0YikrwO0mo4/sendMessage?chat_id=5945441728&amp;text=Testing" DesignTimeRectangle="8, 112, 1350, 56" DesignTimeScaleFactor="1" FriendlyName="'{&quot;ok&quot;:true,&quot;result&quot;:{&quot;m…'" FullSelectorArgument="&lt;webctrl tag='HTML' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='HTML' type='' class='' aaname='' /&gt;" Guid="72c28787-ddf1-4f57-959b-b0b27d805603" InformativeScreenshot="7ecbed6d0d3c8032ba9cf4b43478b732.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='https://api.telegram.org/bot5976580496:AAHFVfc9WBH9NthqwUIeg-Io0YikrwO0mo4/sendMessage?chat_id=5945441728&amp;amp;text=Testing' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
             <ui:DeserializeJson x:TypeArguments="scg:Dictionary(x:String, x:Object)" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[JsonObjectResponse]" JsonString="[RequestURLResponse]" />
-            <If Condition="[JsonObjectResponse(&quot;ok&quot;).ToString.Trim.ToLower.Contains(&quot;true&quot;)]" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[JsonObjectResponse(&quot;ok&quot;).ToString.Trim.ToLower.Contains(&quot;true&quot;)]" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -230,8 +229,8 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="358,92" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[RequestURLSendPhoto]" Version="V3" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358,72" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Stop" />
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="358,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[RequestURLSendPhoto]" Version="V3" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358,71" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Stop" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -239,5 +238,6 @@
         <uix:TargetApp Area="20, 20, 1366, 743" BrowserType="Edge" IconBase64="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" InformativeScreenshot="c5c5e6f941bccfcca46d39afcf3eba06.png" Selector="&lt;html app='msedge.exe' url='openEdge' /&gt;" Url="openEdge" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,71" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Tambahan di branch yang baru" />
   </Sequence>
 </Activity>
